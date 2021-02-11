@@ -1,1 +1,1 @@
-https://github.com/JayGhb/cloudResume-backend/workflows/Python%20application/badge.svg
+![example](https://github.com/JayGhb/cloudResume-backend/workflows/Python%20application/badge.svg)
