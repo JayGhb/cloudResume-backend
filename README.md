@@ -1,1 +1,1 @@
-https://github.com/JayGhb/cloudResume-backend/workflows/python-app.yml/badge.svg
+https://github.com/JayGhb/cloudResume-backend/workflows/Python%20application/badge.svg
