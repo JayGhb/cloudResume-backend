@@ -3,5 +3,5 @@ import requests
 
 
 def test_response():
-	response = requests.get('https://d3uktgftytucdw.cloudfront.net/index.html')
+	response = requests.get('https://manoloui.com')
 	assert response.status_code == 200
