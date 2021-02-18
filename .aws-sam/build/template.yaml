@@ -1,8 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: 'My SAM App
-
-  A much easier to follow tutorial than AWS'' own.
+Description: 'First SAM App
 
   '
 Resources:
@@ -22,7 +20,7 @@ Resources:
         Variables:
           TABLE_NAME:
             Ref: MyTable
-          CORS_URL: https://d3uktgftytucdw.cloudfront.net
+          CORS_URL: https://manoloui.com
       Policies:
       - DynamoDBCrudPolicy:
           TableName:
