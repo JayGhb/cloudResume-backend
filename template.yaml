@@ -1,28 +1,28 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  First SAM App
+  manoloui.com SAM template
 
 Resources:
-  HelloWorldFunction:
+  VisitorCounterLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: Lambda/
       Handler: app.lambda_handler
       Runtime: python3.8
       Events:
-        HelloWorld:
+        VisitorCounterApi:
           Type: Api
           Properties:
             Path: /hello
             Method: get
       Environment:
         Variables: 
-          TABLE_NAME : !Ref MyTable
+          TABLE_NAME : !Ref VisitorsTable
           CORS_URL: https://manoloui.com
       Policies:
         - DynamoDBCrudPolicy:
-            TableName: !Ref MyTable
+            TableName: !Ref VisitorsTable
 
   UsagePlan:
     Type: AWS::ApiGateway::UsagePlan
@@ -39,7 +39,7 @@ Resources:
         RateLimit: 20
       UsagePlanName: VisitorsApiUsagePlan
 
-  MyTable:
+  VisitorsTable:
     Type: AWS::Serverless::SimpleTable
 
 Outputs:
